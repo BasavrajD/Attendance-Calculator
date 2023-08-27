@@ -3,11 +3,12 @@ function cal(){
     var sub = document.getElementById('sub').value;
     var a = parseInt(document.getElementById('n1').value);
     var b = parseInt(document.getElementById('n2').value);
-    var ans = (b*100)/a;
-
-    document.getElementById('line').innerHTML = sub+" is:";
-    document.getElementById('result').value = Math.round(ans)+"%";
     if(b <= a){
+        var ans = (b*100)/a;
+
+        document.getElementById('line').innerHTML = sub+" is:";
+        document.getElementById('result').value = Math.round(ans)+"%";
+    
         if(ans <= 75){
             document.getElementById('result').style.boxShadow = "0 0 30px red";
         }
