@@ -7,12 +7,16 @@ function cal(){
 
     document.getElementById('line').innerHTML = sub+" is:";
     document.getElementById('result').value = Math.round(ans)+"%";
-
-    if(ans <= 75){
-        document.getElementById('result').style.boxShadow = "0 0 30px red";
+    if(b <= a){
+        if(ans <= 75){
+            document.getElementById('result').style.boxShadow = "0 0 30px red";
+        }
+        else{
+            document.getElementById('result').style.boxShadow = "0 0 30px green";
+        }
     }
     else{
-        document.getElementById('result').style.boxShadow = "0 0 30px green";
+        document.getElementById('result').value = "Invalid";
     }
 }
 cal();
